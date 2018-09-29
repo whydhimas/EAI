@@ -5,8 +5,8 @@ include "session.php";
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ABOUT | DISKOMINFO KOTA BANDUNG</title>
-  <link rel="shortcut icon" href="diskominfo_kota_bandung.png" />
+  <title>TREND & STATISTIK | B-SPORT</title>
+  <link rel="shortcut icon" href="b.png" />
   <style type="text/css">
   body {
     margin: 0;
@@ -42,40 +42,58 @@ include "session.php";
     color: white;
   }
 
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid #ddd;
-  }
-
-  th , td {
+  .btnsubmit, .btnprint {
+    background-color: #4CAF50; /* Green */
     border: none;
-    text-align: left;
-    padding: 8px;
+    color: white;
+    padding: 9px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+    .btnsubmit:hover, .btnprint:hover {
+    background-color: #387C3B;
+    color: white;
   }
 
-  tr:nth-child(even){background-color: #f2f2f2}
+  input[type="text"],
+  textarea {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 26px;
+    width: 300px;
+  }
 
 </style>
 </head>
 <body>
   <ul>
-    <li><center><br><img src="kota_bdg.png" width="110px;"><br><br></center></li>
+    <li><center><br><img src="logo.png" width="110px;"><br><br></center></li>
     <li><a href="menu_admin.php">Home</a></li>
-    <li><a href="goods_lists.php">BTS Lists</a></li>
-    <li><a href="search_goods.php">Search BTS</a></li>
-    <li><a class="active" href="about.php">About</a></li>
+    <li><a href="sepakbola.php">Sepak Bola</a></li>
+    <li><a href="bolabasket.php">Bola Basket</a></li>
+    <li><a href="badminton.php">Badminton</a></li>
+    <li><a href="tennis.php">Tennis</a></li>
+    <li><a href="motogp.php">MotoGP</a></li>
+    <li><a href="trend_stat.php">Trend & Statistik</a></li>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <li><a href="index.php">Back to Index</a></li>
+    <li><a class="active" href="about.php">About</a></li>
     <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <form method="GET" action="get.php">
     <br><br><h2>ABOUT US</h2>
     <div>
       <fieldset style="width: 700px; border: 0;">
         <img width="250px" src="about_us.png">
       </fieldset>
     </div>
+  </div>
   </div>
 </body>
 <script type="text/javascript">

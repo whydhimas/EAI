@@ -5,7 +5,7 @@ include "session.php";
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HOME | B-SPORT</title>
+  <title>BOLA BASKET | B-SPORT</title>
   <link rel="shortcut icon" href="b.png" />
   <style type="text/css">
   body {
@@ -74,9 +74,9 @@ include "session.php";
 <body>
   <ul>
     <li><center><br><img src="logo.png" width="110px;"><br><br></center></li>
-    <li><a class="active" href="menu_admin.php">Home</a></li>
+    <li><a href="menu_admin.php">Home</a></li>
     <li><a href="sepakbola.php">Sepak Bola</a></li>
-    <li><a href="bolabasket.php">Bola Basket</a></li>
+    <li><a class="active" href="bolabasket.php">Bola Basket</a></li>
     <li><a href="badminton.php">Badminton</a></li>
     <li><a href="tennis.php">Tennis</a></li>
     <li><a href="motogp.php">MotoGP</a></li>
@@ -87,11 +87,8 @@ include "session.php";
   </ul>
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
-    <br><br><h2>Type City and Country</h2>
-    <br><p>Type example 'Bandung'</p>
-      <input type="text" name="q" required>
-      <input type="submit" name="submit" class="btnsubmit"> <br>
-    </form>
+    <br><br><h2>Bola Basket</h2>
+    
   </div>
 </body>
 <script type="text/javascript">
