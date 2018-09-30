@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LOGIN | DISKOMINFO KOTA BANDUNG</title>
-	<link rel="shortcut icon" href="diskominfo_kota_bandung.png" />
+	<title>LOGIN | B-SPORT</title>
+	<link rel="shortcut icon" href="b.png" />
 	<style type="text/css">
 		.form {
 			padding: 1em;
@@ -46,7 +46,7 @@
 	<center>
 	<br><br><br><br><br><br><br>
 	<form action="cek_login.php" method="post" class="form">
-		<img src="diskominfo_kota_bandung.png" style="width: 200px;"><br><br>
+		<img src="logo2.png" style="width: 250px;"><br><br>
 		<table border="0" style="font-family: verdana;">
 			<tr>
 				<td>Username</td>

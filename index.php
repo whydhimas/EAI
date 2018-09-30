@@ -6,8 +6,8 @@ include "session.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>INDEX | ADMIN</title>
-  <link rel="shortcut icon" href="diskominfo_kota_bandung.png" />
+	<title>INDEX | B-SPORT</title>
+  <link rel="shortcut icon" href="b.png" />
 	<style type="text/css">
 		@font-face {
 			font-family: 'Montserrat';
@@ -23,7 +23,7 @@ include "session.php";
 	<center><div style="background-color: #f2f2f2; width: 700px; height: 400px; border-webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5); box-shadow: 0 0 40px 10px rgba(0,0,0,.5);">
 	<center>
 		<br><br><br>
-		<img src="kota_bdg.png" style="width: 170px;">
+		<img src="logo2.png" style="width: 500px;">
 	<br><br><br><br>
 	<center>
 	<div class="content">

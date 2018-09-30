@@ -73,7 +73,7 @@ include "session.php";
 </head>
 <body>
   <ul>
-    <li><center><br><img src="logo.png" width="110px;"><br><br></center></li>
+    <li><center><br><img src="logo.png" width="200px;"><br><br></center></li>
     <li><a href="menu_admin.php">Home</a></li>
     <li><a href="sepakbola.php">Sepak Bola</a></li>
     <li><a href="bolabasket.php">Bola Basket</a></li>
@@ -81,7 +81,7 @@ include "session.php";
     <li><a href="tennis.php">Tennis</a></li>
     <li><a href="motogp.php">MotoGP</a></li>
     <li><a href="trend_stat.php">Trend & Statistik</a></li>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <li><a href="about.php">About</a></li>
     <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>

@@ -46,7 +46,7 @@ include "session.php";
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 9px 15px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -73,7 +73,7 @@ include "session.php";
 </head>
 <body>
   <ul>
-    <li><center><br><img src="logo.png" width="110px;"><br><br></center></li>
+    <li><center><br><img src="logo.png" width="200px;"><br><br></center></li>
     <li><a class="active" href="menu_admin.php">Home</a></li>
     <li><a href="sepakbola.php">Sepak Bola</a></li>
     <li><a href="bolabasket.php">Bola Basket</a></li>
@@ -81,16 +81,16 @@ include "session.php";
     <li><a href="tennis.php">Tennis</a></li>
     <li><a href="motogp.php">MotoGP</a></li>
     <li><a href="trend_stat.php">Trend & Statistik</a></li>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <li><a href="about.php">About</a></li>
     <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
-    <br><br><h2>Type City and Country</h2>
-    <br><p>Type example 'Bandung'</p>
-      <input type="text" name="q" required>
-      <input type="submit" name="submit" class="btnsubmit"> <br>
+    <br><br><h2>The Weather Information </h2>
+    <br><p>Type the city</p>
+      <input type="text" name="q" required  placeholder=" ex. Bandung">
+      <input type="submit" name="submit" class="btnsubmit"><br>
     </form>
   </div>
 </body>

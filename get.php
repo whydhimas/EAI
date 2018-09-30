@@ -6,7 +6,7 @@
 </head>
 <style>
 html, body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
 </style>
 <body>
