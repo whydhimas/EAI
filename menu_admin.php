@@ -88,7 +88,7 @@ include "session.php";
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
     <br><br><h2>The Weather Information </h2>
-    <br><p>Type the city</p>
+    <br><p>* type the city for the weather information</p>
       <input type="text" name="q" required  placeholder=" ex. Bandung">
       <input type="submit" name="submit" class="btnsubmit"><br>
     </form>
