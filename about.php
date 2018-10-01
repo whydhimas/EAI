@@ -87,7 +87,7 @@ include "session.php";
   </ul>
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
-    <br><br><h2>ABOUT US</h2>
+    <br><br><h2>About Us</h2>
     <div>
       <fieldset style="width: 700px; border: 0;">
         <img width="250px" src="about_us.png">
