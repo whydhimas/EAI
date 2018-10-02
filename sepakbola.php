@@ -88,7 +88,38 @@ include "session.php";
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
     <br><br><h2>Sepak Bola</h2>
-    
+    <div>
+      <?php
+
+  $json = file_get_contents("https://newsapi.org/v2/top-headlines?sources=four-four-two&apiKey=6afde1663c3c419e94d00dbad2f9de33");
+        
+  $data = json_decode($json);
+  
+  foreach ($data->articles as $key => $_articles) {
+    if(isset($_articles->title) && isset($_articles->url) && isset($_articles->content)){
+       echo "<b><font size='4'>".$_articles->title."</font></b><br/>".
+            "Gambar : ".$_articles->urlToImage."<br/>".
+            "Sumber : ".$_articles->url."<br/>".
+            "Isi : <i>".$_articles->content."</i><br/>"."<hr>";
+    }
+   
+  }
+
+  /*$array = array("0","1","2","3","4","5","6","7","8","9","10","11","12"); 
+
+  $arrlength = count($array);
+
+  for($x = 0; $x < $arrlength; $x++) {
+
+  echo "Author : ".$data->articles[$array[$x]]->author."<br/>".
+  "Judul : ".$data->articles[$array[$x]]->title."<br/>".
+  "Sumber : ".$data->articles[$array[$x]]->url."<br/>".
+  "Gambar : ".$data->articles[$array[$x]]->urlToImage."<br/>".
+  "Isi : ".$data->articles[$array[$x]]->content."<br/>"."<hr>";
+
+  }*/
+?>
+    </div>
   </div>
 </body>
 <script type="text/javascript">

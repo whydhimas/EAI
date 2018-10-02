@@ -1,8 +1,8 @@
 <?php session_start();
 unset($_SESSION['username']);
 ?>
-<title>LOGOUT | DISKOMINFO KOTA BANDUNG</title>
-<link rel="shortcut icon" href="diskominfo_kota_bandung.png" />
+<title>LOGOUT | B-SPORT</title>
+<link rel="shortcut icon" href="b.png" />
  <style type="text/css">
  	.form {
  		padding: 1em;

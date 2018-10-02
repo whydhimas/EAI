@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php 
+require_once('settings.php');
+
+$login_url = 'https://accounts.google.com/o/oauth2/v2/auth?scope=' . urlencode('https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.me') . '&redirect_uri=' . urlencode(CLIENT_REDIRECT_URL) . '&response_type=code&client_id=' . CLIENT_ID . '&access_type=online';
+?>
+
 <html>
 <head>
 	<title>LOGIN | B-SPORT</title>
@@ -40,6 +46,22 @@
     		color: white;
 		}
 
+		.buttonGoogle {
+  			background: #e8e8e8;
+  			color: #000;
+  			border: 0;
+  			padding: 5px 8px;
+  			margin: 10px 0px;
+  			width: 260px;
+  		}
+
+  		.buttonGoogle:hover {
+  			opacity: 1;
+  			right: 0;
+  			background-color: #b5b5b5;
+    		color: black;
+		}
+
 	</style>
 </head>
 <body style="background-color: white; background-image: url('bground.jpg'); background-size: 100%; background-repeat: no-repeat;">
@@ -59,9 +81,10 @@
 				<td><input type="password" name="password" id="password"></td>
 			</tr>
 			<tr>
-				<td colspan="3"><center><input type="submit" name="login" value="LOGIN" class="button"></center></td>
+				<td colspan="3"><center><input type="submit" name="login" value="LOGIN" class="button">
+					<a href="<?= $login_url ?>"><img src="google.png" width="90"></a></center></td>
 			</tr>
-		</table>		
+		</table>
 	</form>
 	<br><br><br><br><br><br><br><br><br><br><br>
 	</center>

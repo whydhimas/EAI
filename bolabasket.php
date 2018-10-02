@@ -88,7 +88,33 @@ include "session.php";
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
     <br><br><h2>Bola Basket</h2>
-    
+    <!-- <?php
+        session_start();
+        require_once("twitteroauth.php");
+        $notweets = 20;
+
+        $twitteruser = "detiksport";
+        $consumer_key = "ccoZM13DRsc3Ls1aAN3iIwtcL";
+        $consumer_secret = "0XeKCGGrmw4ZfpZCWrK6sLugouAbItGQdrgaAJFmIaqnJCUMqO";
+        $access_token = " 982198302-ovduSj5AyyGoweHyF1QA0zitNBpINXqqcopguGJF";
+        $access_token_secret = "xTqr2COnxzIPOzVc80p6cvKgw1VK35AK0FPALJR8F6MIC";
+
+        function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token, $oauth_token_secret) {
+          $connection = new TwitterOAuth($cons_key, $cons_secret, $oauth_token, $oauth_token, $oauth_token_secret);
+            return $connection;
+        }
+
+        $connection = getConnectionWithAccessToken($consumer_key, $consumer_secret, $access_token, $access_token_secret);
+
+        $tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser."&count=".notweets);
+
+        foreach ($tweets as $key => $tweet) {
+          echo '<img src"'.$tweet->user->profile_image_url.'"align="left">';
+          echo $tweet->created_at.'<br/>';
+          echo $tweet->user->name.'('.$tweet->user->screen_name.')<br/>';
+          echo $tweet->text.'<br/><hr/>';
+        }
+    ?> -->
   </div>
 </body>
 <script type="text/javascript">
