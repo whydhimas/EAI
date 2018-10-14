@@ -81,7 +81,8 @@ include "session.php";
     <li><a href="tennis.php">talkSport</a></li>
     <li><a href="motogp.php">Sports in Bahasa</a></li>
     <li><a href="trend_stat.php">Trend & Statistik</a></li>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <li><a href="index.php">Index</a></li>
     <li><a href="about.php">About</a></li>
     <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>

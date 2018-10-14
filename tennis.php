@@ -81,7 +81,8 @@ include "session.php";
     <li><a class="active" href="tennis.php">talkSport</a></li>
     <li><a href="motogp.php">Sports in Bahasa</a></li>
     <li><a href="trend_stat.php">Trend & Statistik</a></li>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <li><a href="index.php">Index</a></li>
     <li><a href="about.php">About</a></li>
     <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>
@@ -97,7 +98,7 @@ include "session.php";
           if(isset($_articles->title) && isset($_articles->url) && isset($_articles->content)){
              echo "<b><font size='4'>".$_articles->title."</font></b><br/>".
                   "<img style='box-shadow: 3px 3px 3px grey;' src='".$_articles->urlToImage."' width='300' <br/><br/>".
-                  "<a href='".$_articles->url."' target='_blank'><img src='read_more.png' width='40'></a><br/>".
+                  "<a href='".$_articles->url."' target='_blank'>Read more >></a><br/>".
                   "<i>".$_articles->content."</i><br/>"."<hr>";
           } 
         }

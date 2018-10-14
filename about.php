@@ -75,13 +75,14 @@ include "session.php";
   <ul>
     <li><center><br><img src="logo.png" width="200px;"><br><br></center></li>
     <li><a href="menu_admin.php">Home</a></li>
-    <li><a href="sepakbola.php">Sepak Bola</a></li>
-    <li><a href="bolabasket.php">Bola Basket</a></li>
-    <li><a href="badminton.php">Badminton</a></li>
-    <li><a href="tennis.php">Tennis</a></li>
-    <li><a href="motogp.php">MotoGP</a></li>
+    <li><a href="sepakbola.php">FourFourTwo</a></li>
+    <li><a href="bolabasket.php">ESPN</a></li>
+    <li><a href="badminton.php">B/R - Bleacher Report</a></li>
+    <li><a href="tennis.php">talkSport</a></li>
+    <li><a href="motogp.php">Sports in Bahasa</a></li>
     <li><a href="trend_stat.php">Trend & Statistik</a></li>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <li><a href="index.php">Index</a></li>
     <li><a class="active" href="about.php">About</a></li>
     <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>
@@ -90,10 +91,9 @@ include "session.php";
     <br><br><h2>About Us</h2>
     <div>
       <fieldset style="width: 700px; border: 0;">
-        <img width="250px" src="about_us.png">
+        <center><img width="400px" src="about.png"></center>
       </fieldset>
     </div>
-  </div>
   </div>
 </body>
 <script type="text/javascript">
