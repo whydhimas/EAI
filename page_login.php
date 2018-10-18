@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php 
 require_once('settings.php');
+require './fb-init.php';
 
 $login_url = 'https://accounts.google.com/o/oauth2/v2/auth?scope=' . urlencode('https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.me') . '&redirect_uri=' . urlencode(CLIENT_REDIRECT_URL) . '&response_type=code&client_id=' . CLIENT_ID . '&access_type=online';
 ?>
@@ -82,7 +83,8 @@ $login_url = 'https://accounts.google.com/o/oauth2/v2/auth?scope=' . urlencode('
 			</tr>
 			<tr>
 				<td colspan="3"><center><input type="submit" name="login" value="LOGIN" class="button">
-					<a href="<?= $login_url ?>"><img src="google.png" width="90"></a></center></td>
+					<a href="<?= $login_url ?>"><img src="google.png" width="60"></a></center>
+					<center><a href="<?php echo $loginfb_url; ?>"><img src="facebook.png" width="40"></a></center></center></td>
 			</tr>
 		</table>
 	</form>

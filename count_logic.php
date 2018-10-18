@@ -8,10 +8,10 @@ if($_GET['kategori'] == "soccer"){
 }else if($_GET['kategori'] == "basketball"){
 	$query = mysql_query("update count set basketball = basketball+1");
 	$qry = mysql_fetch_array($query);
-	header("location:soccer.php");
+	header("location:basketball/menu_admin.php");
 }else if ($_GET['kategori'] == "badminton"){
 	$query = mysql_query("update count set badminton = badminton+1");
 	$qry = mysql_fetch_array($query);
-	header("location:soccer.php");
+	header("location:badminton/menu_admin.php");
 }
 ?>

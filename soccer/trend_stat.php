@@ -5,7 +5,7 @@ include "session.php";
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TREND & STATISTIK | B-SPORT</title>
+  <title>NEWS | B-SPORT</title>
   <link rel="shortcut icon" href="b.png" />
   <style type="text/css">
   body {
@@ -75,20 +75,33 @@ include "session.php";
   <ul>
     <li><center><br><img src="logo.png" width="200px;"><br><br></center></li>
     <li><a href="menu_admin.php">Home</a></li>
-    <li><a href="sepakbola.php">FourFourTwo</a></li>
-    <li><a href="bolabasket.php">ESPN</a></li>
-    <li><a href="badminton.php">B/R - Bleacher Report</a></li>
-    <li><a href="tennis.php">talkSport</a></li>
-    <li><a href="motogp.php">Sports in Bahasa</a></li>
-    <li><a class="active" href="trend_stat.php">Trend & Statistik</a></li>
+    <li><a href="sepakbola.php">Activities</a></li>
+    <li><a href="bolabasket.php">Match Schedules</a></li>
+    <li><a href="badminton.php">League Standings</a></li>
+    <li><a class="active" href="trend_stat.php">News</a></li>
+    <li><a href="the_chart.php">User Statistic</a></li>
     <br><br><br><br><br><br><br><br><br>
-    <li><a href="index.php">Index</a></li>
+    <li><a href="../index.php">Index</a></li>
     <li><a href="about.php">About</a></li>
-    <li><a href="logout.php" onclick="return ConfirmLogout()">Logout</a></li>
+    <li><a href="../logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
-    <br><br><h2>Trend & Statistik</h2>
+    <br><br><h2><img src="442.png" height="50"></h2>
+    <?php
+        $json = file_get_contents("https://newsapi.org/v2/top-headlines?sources=four-four-two&apiKey=6afde1663c3c419e94d00dbad2f9de33");
+        
+        $data = json_decode($json);
+  
+        foreach ($data->articles as $key => $_articles) {
+          if(isset($_articles->title) && isset($_articles->url) && isset($_articles->content)){
+             echo "<b><font size='4'>".$_articles->title."</font></b><br/>".
+                  "<img style='box-shadow: 3px 3px 3px grey;' src='".$_articles->urlToImage."' width='300' <br/><br/>".
+                  "<a href='".$_articles->url."' target='_blank'>Read more >></a><br/>".
+                  "<i>".$_articles->content."</i><br/>"."<hr>";
+          } 
+        }
+    ?>
     
   </div>
 </body>
