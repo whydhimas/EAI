@@ -1,7 +1,7 @@
 <?php  
  include "session.php";
  $connect = mysqli_connect("localhost", "root", "", "diskominfo_bdg");  
- $query = "SELECT * FROM count ORDER BY id";  
+ $query = "SELECT * FROM count ORDER BY id";
  $result = mysqli_query($connect, $query);  
  ?>
 <!DOCTYPE html>
@@ -72,30 +72,6 @@
   }
 
 </style>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-           <script type="text/javascript">  
-           google.charts.load('current', {'packages':['corechart']});  
-           google.charts.setOnLoadCallback(drawChart);  
-           function drawChart()  
-           {  
-                var data = google.visualization.arrayToDataTable([  
-                          ['soccer', 'soccer'],  
-                          <?php  
-                          while($row = mysqli_fetch_array($result))  
-                          {  
-                               echo "['".$row["soccer"]."', ".$row["soccer"]."],";
-                          }  
-                          ?>  
-                     ]);  
-                var options = {  
-                      title: 'Presentase pengunjung B-SPORT berdasarkan olahraga yang dipilih',  
-                      is3D:true,  
-                      pieHole: 0.3
-                };  
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
-                chart.draw(data, options);  
-           }  
-           </script>  
 </head>
 <body>
   <ul>
@@ -114,9 +90,50 @@
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <form method="GET" action="get.php">
     <br><br><h2>User Statistic</h2>
-    <div style="width:900px;">
-                <div id="piechart" style="width: 900px; height: 500px;"></div>  
-           </div>  
+    <h5>Grafik pengunjung B-SPORT berdasarkan olahraga yang dipilih</h5>
+    <div style="width: 920px;">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script type="text/javascript">
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: ["Soccer", "Basketball", "Badminton"],
+          datasets: [{
+              label: '# of Votes',
+              data: 
+              <?php  
+                while($row = mysqli_fetch_array($result))  
+                {  
+                     echo "['".$row["soccer"]."', ".$row["basketball"].", ".$row["badminton"]."],";
+                }  
+              ?>
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  ],
+              borderColor: [
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+    </script>  
 </body>
 <script type="text/javascript">
   function ConfirmLogout()

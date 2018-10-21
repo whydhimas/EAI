@@ -67,6 +67,6 @@ $city = $_GET['q'];
 	</div>
 <br>
 <br>
-	<a href="menu_admin.php">Back to Home</a>	
+	<a href="menu_admin.php" onclick="window.close();">Back to Home</a>	
 </body>
 </html>

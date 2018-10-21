@@ -86,7 +86,7 @@ include "session.php";
     <li><a href="../logout.php" onclick="return ConfirmLogout()">Logout</a></li>
   </ul>
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <form method="GET" action="get.php">
+    <form method="GET" action="get.php" target="_blank">
     <br><br><h2>The Weather Information</h2>
     <div>
     <?php
@@ -142,7 +142,6 @@ include "session.php";
                     default:
                         echo "-";
               }
-
                   echo "<br><b>". $data->query->results->channel->location->city . ", ";
                   echo $data->query->results->channel->location->region. ", ";
                   echo $data->query->results->channel->location->country . "<br/></b>"  ;
