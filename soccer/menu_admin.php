@@ -75,7 +75,7 @@ include "session.php";
   <ul>
     <li><center><br><img src="logo.png" width="200px;"><br><br></center></li>
     <li><a class="active" href="menu_admin.php">Home</a></li>
-    <li><a href="sepakbola.php">Activities</a></li>
+    
     <li><a href="bolabasket.php">Match Schedules</a></li>
     <li><a href="badminton.php">League Standings</a></li>
     <li><a href="trend_stat.php">News</a></li>

@@ -92,7 +92,7 @@ include "session.php";
   <ul>
     <li><center><br><img src="logo.png" width="200px;"><br><br></center></li>
     <li><a href="menu_admin.php">Home</a></li>
-    <li><a href="sepakbola.php">Activities</a></li>
+    
     <li><a class="active" href="bolabasket.php">Match Schedules</a></li>
     <li><a href="badminton.php">League Standings</a></li>
     <li><a href="trend_stat.php">News</a></li>
@@ -106,7 +106,6 @@ include "session.php";
     <br><br><h2>Match Standings</h2>
     <iframe src="demo-page2.html" name="myFrame" width="700" height="450" frameborder="0"></iframe>
     <p><a href="https://www.goal.com/id/berita/jadwal-tv-siaran-langsung-sepakbola-hari-ini/1qomojcjyge9n1nr2voxutdc1n" target="myFrame"><button class="btnstanding">Match Schedule by GOAL</button></a>
-        
         </p>
   </div>
 </body>
